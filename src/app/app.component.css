@@ -1,0 +1,59 @@
+/* styles.css (ou seu arquivo de estilo global) */
+
+.dark-theme {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  /* Outros estilos específicos do modo escuro */
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+  /* Outros estilos específicos do modo claro */
+}
+
+
+
+
+/* TELAS PC */
+@media (min-width: 769px) {
+
+
+  .containerPainel {
+    display: flex;
+    align-items: center;
+  }
+
+  .painel {
+    background-color: #333;
+    color: #fff;
+    width: 20%; /* Alterado para 30% para acomodar o conteúdo principal */
+    padding: 10px;
+    margin: 100px;
+    margin-top: 150px;
+    border-radius: 20px;
+    height: 240px;
+  }
+
+  .conteudo {
+    padding: 20px;
+
+    margin-top: 80px;
+    background-color: #333;
+    border-radius: 20px;
+    width: 50%; /* Ocupa 70% da tela */
+  }
+
+
+}
+
+
+
+
+
+/* Telas Mobile */
+@media (max-width: 768px) {
+  .painel {
+    display: none; /* Esconder a barra de menu */
+  }
+}

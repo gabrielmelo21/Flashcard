@@ -1,0 +1,13 @@
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+<nav class="bottom-navigation">
+  <a routerLink="/home" routerLinkActive="active" (click)="selectOption('home')" [ngClass]="{ 'selected': selectedOption === 'home' }">
+
+    <i class="fi fi-sr-home icon-circle"   [ngClass]="{ 'selected-circle': selectedOption === 'home' }"></i>
+  </a>
+  <a routerLink="/slangs" routerLinkActive="active" (click)="selectOption('about')" [ngClass]="{ 'selected': selectedOption === 'about' }">
+    <i class="fi fi-sr-bookmark icon-circle" [ngClass]="{ 'selected-circle': selectedOption === 'about' }"></i>
+  </a>
+  <a routerLink="/download" routerLinkActive="active" (click)="selectOption('contact')" [ngClass]="{ 'selected': selectedOption === 'contact' }">
+    <i class="fi fi-sr-download icon-circle" [ngClass]="{ 'selected-circle': selectedOption === 'contact' }"></i>
+  </a>
+</nav>

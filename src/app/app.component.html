@@ -1,0 +1,26 @@
+<div [ngClass]="{ 'dark-theme': isDarkTheme(), 'light-theme': !isDarkTheme() }">
+
+  <!-- coloque aqui o toolbar com o <button (click)="toggleTheme()">Toggle Theme</button>
+  -->
+
+<app-toolbar></app-toolbar>
+
+
+  <div class="containerPainel">
+
+    <div class="painel">
+      <app-painel></app-painel>
+    </div>
+
+
+
+    <!-- colocar animação aqui -->
+  <main class="conteudo" [@fadeInOut]>
+  <router-outlet></router-outlet>
+  </main>
+</div>
+
+
+
+</div> <!-- referente ao darktheme -->
+<app-bottom-navigation></app-bottom-navigation>

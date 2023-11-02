@@ -1,0 +1,56 @@
+.painelButtons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+
+
+}
+
+
+
+.painelButtons button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+
+  margin: 10px;
+  color: white; /* Cor do texto */
+  animation: zoomIn 0.6s ease;
+
+  background: transparent;
+  box-shadow: none;
+
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease; /* Ajuste a curva de transição para um efeito mais suave */
+
+}
+.painelButtons i{
+
+ padding: 10px;
+
+}
+
+.selected{
+  background-color: #00bcd4 !important; /* Cor do círculo quando selecionado */
+
+  animation: zoomIn 0.6s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+

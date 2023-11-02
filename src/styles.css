@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.css (ou styles.scss) */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* styles.css (ou seu arquivo de estilo global) */
+
+.dark-theme {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Estilos globais para o body */
+body.dark-theme {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Adicione a transição suave */
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Adicione a transição suave */
+}
+
+
+button:focus,
+button:active,
+a:focus,
+a:active {
+  outline: none !important;
+  text-decoration: none;
+}

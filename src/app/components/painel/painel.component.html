@@ -1,0 +1,48 @@
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+
+
+ <div class="painelButtons">
+   <button mat-fab extended
+           color="primary"
+           routerLink="/home"
+           routerLinkActive="active"
+           (click)="selectOption('home')"
+           [ngClass]="{ 'selected': selectedOption === 'home' }">
+     <i class="fi fi-sr-home icon-circle"  ></i>
+    <span> Learn</span>
+   </button>
+
+   <button mat-fab extended
+           color="primary"
+           routerLink="/slangs"
+           routerLinkActive="active"
+           (click)="selectOption('slangs')"
+           [ngClass]="{ 'selected': selectedOption === 'slangs' }"
+   >
+     <i class="fi fi-sr-bookmark"></i>
+     <span> Saved Slangs</span>
+   </button>
+
+
+
+     <button mat-fab extended
+             color="primary"
+             routerLink="/download"
+             routerLinkActive="active"
+             (click)="selectOption('download')"
+             [ngClass]="{ 'selected': selectedOption === 'download' }"
+     >
+       <i class="fi fi-sr-download"></i>
+       <span>Download</span>
+     </button>
+
+
+</div>
+
+
+
+
+
+
+
