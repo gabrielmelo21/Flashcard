@@ -11,9 +11,11 @@ import {MatRippleModule} from "@angular/material/core";
 import {MatCardModule} from "@angular/material/card";
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from "@angular/material/input";
+import { ExpressionGeneratorComponent } from './expression-generator/expression-generator.component';
 @NgModule({
   declarations: [
   HomeComponent,
+  ExpressionGeneratorComponent,
 
   ],
   imports: [

@@ -2,7 +2,7 @@
 /* styles.css (ou styles.scss) */
 
 
-html, body { height: 100%; }
+html, body { height: 100%; background: #1c1c1c; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* styles.css (ou seu arquivo de estilo global) */
@@ -12,10 +12,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: #ffffff;
 }
 
-.light-theme {
-  background-color: #ffffff;
-  color: #000000;
-}
 
 /* Estilos globais para o body */
 body.dark-theme {
@@ -24,12 +20,32 @@ body.dark-theme {
   transition: background-color 0.5s ease, color 0.5s ease; /* Adicione a transição suave */
 }
 
-body.light-theme {
-  background-color: #ffffff;
-  color: #000000;
-  transition: background-color 0.5s ease, color 0.5s ease; /* Adicione a transição suave */
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: auto;
+  font-family: 'Bangers', cursive;
+
+  background: linear-gradient(45deg, #00ffff, #800080); /* Gradiente ciano a roxo */
+  background-clip: text; /* Aplicar o gradiente ao texto */
+  -webkit-background-clip: text; /* Para navegadores baseados em Webkit */
+  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1); /* Text-shadow branco bonito */
+  letter-spacing: 2px; /* Aumentar o espaçamento entre as letras */
+  padding-right: 10px; /* Adicionar um espaço extra à direita */
+
+  text-align: center;
+  margin: 20px;
+  padding: 4px;
+
 }
 
+.divLine {
+  height: 1px;
+  background-color: #1c1c1c;
+  margin: 10px 0; /* Ajuste as margens conforme necessário */
+}
 
 button:focus,
 button:active,

@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     height: 60px;
     z-index: 1000; /* Certifique-se de que a navegação fique acima do conteúdo */

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {MyslagsComponent} from "./components/myslags/myslags.component";
-import {DownloadAppComponent} from "./components/download-app/download-app.component";
 import {HomeComponent} from "./components/home/home.component";
+import {ExpressionGeneratorComponent} from "./components/expression-generator/expression-generator.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -10,9 +10,8 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./components/components.module').then(m => m.ComponentsModule)
   },
-
   { path: 'slangs', component: MyslagsComponent },
-  { path: 'download', component: DownloadAppComponent },
+  { path: 'expressionGenerator', component: ExpressionGeneratorComponent },
 
   // Outras rotas ou configurações aqui
 ];

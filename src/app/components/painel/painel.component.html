@@ -9,8 +9,8 @@
            routerLinkActive="active"
            (click)="selectOption('home')"
            [ngClass]="{ 'selected': selectedOption === 'home' }">
-     <i class="fi fi-sr-home icon-circle"  ></i>
-    <span>Aprender com Vídeo</span>
+     <i class="fi fi-sr-add"  ></i>
+   <span>Gerador de Expressões</span>
    </button>
 
    <button mat-fab extended
@@ -28,14 +28,15 @@
 
      <button mat-fab extended
              color="primary"
-             routerLink="/download"
+             routerLink="/expressionGenerator"
              routerLinkActive="active"
-             (click)="selectOption('download')"
-             [ngClass]="{ 'selected': selectedOption === 'download' }"
+             (click)="selectOption('expressionGenerator')"
+             [ngClass]="{ 'selected': selectedOption === 'expressionGenerator' }"
      >
-       <i class="fi fi-sr-download"></i>
-       <span>Gerador de Expressões</span>
+       <i class="fi fi-sr-play"></i>
+       <span>Aprender com Vídeos</span>
      </button>
+
 
 
 </div>

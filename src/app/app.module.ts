@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {BottomNavigationModule} from "./components/bottom-navigation/bottom-navigation.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ToolbarModule} from "./components/toolbar/toolbar.module";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 
@@ -26,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     RouterLink,
     BottomNavigationModule,
     BrowserAnimationsModule,
-    ToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatIconModule,

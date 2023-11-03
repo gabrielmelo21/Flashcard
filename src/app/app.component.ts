@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ThemeService} from "./services/theme.service";
+
 import {animate, style, transition, trigger} from "@angular/animations";
 
 @Component({
@@ -20,16 +20,8 @@ import {animate, style, transition, trigger} from "@angular/animations";
   ]
 })
 export class AppComponent {
-  title = 'SlagApp';
+  title = 'SlangDoggy';
 
-  constructor(private themeService: ThemeService) {}
-
-  toggleTheme() {
-    this.themeService.toggleTheme();
-  }
-
-  isDarkTheme() {
-    return this.themeService.isDarkTheme();
-  }
+  constructor( ) {}
 
 }
