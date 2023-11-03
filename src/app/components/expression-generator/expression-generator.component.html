@@ -1,16 +1,29 @@
 <!--<h1>Aqui vai ficar a barra de video , video e inputs para marcar expressions </h1>
 -->
 
-<h1 class="logo">Aprenda Inglês com Vídeos</h1><br>
-<div class="divLine"></div>
-<mat-form-field appearance="fill">
-  <mat-label>Youtube URL</mat-label>
-  <input matInput placeholder="Digite a URL do Youtube"  >
-  <button mat-button matSuffix   >
-    <mat-icon>send</mat-icon>
-  </button>
-</mat-form-field>
+<h1 class="logo">Salve as expressões aprendidas</h1><br>
 
 <div class="divLine"></div>
+
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <mat-form-field  style="width: 100%">
+      <mat-label>Inglês</mat-label>
+      <input matInput formControlName="ingles" placeholder="A expressão em inglês aprendida..."  >
+    </mat-form-field>
+       <br>
+    <mat-form-field  style="width: 100%">
+      <mat-label>Português</mat-label>
+      <input matInput formControlName="portugues" placeholder="A tradução da expressão..." required>
+    </mat-form-field>
+<br>
+    <mat-form-field   style="width: 100%">
+      <mat-label>Explain</mat-label>
+      <textarea matInput formControlName="explain" placeholder="Explique algo..." rows="5"></textarea>
+    </mat-form-field>
+<br>
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" class="mat-button-lg">Salvar nova expressão</button>
+    </div>
+  </form>
 
 

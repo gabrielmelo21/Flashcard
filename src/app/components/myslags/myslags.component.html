@@ -1,7 +1,6 @@
 <main [@fadeInOut]>
 
 
-
   <mat-card class="ajust_for_pc" style="background: transparent;" >
         <mat-card-header>
           <h4 class="logo">My Saved Slangs </h4>
@@ -18,12 +17,18 @@
         </li>
         <li>
           <div class="text-item">
-            <h3>Título do Item 2</h3>
-            <p>Descrição do Item 2. Linha um.</p>
-            <p>Linha dois da descrição do Item 2.</p>
+
+            <div *ngIf="listWords$ | async as words">
+              <div *ngFor="let word of words">
+                {{ word.english }} <!-- Substitua propertyName pelo nome da propriedade que deseja exibir -->
+              </div>
+            </div>
           </div>
         </li>
         <!-- Adicione mais itens conforme necessário -->
+        <ng-template *ngFor="let x of listWords$ | async">
+               {{x.english}}
+        </ng-template>
       </ul>
 
 

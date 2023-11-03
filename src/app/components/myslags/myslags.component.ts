@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from "@angular/animations";
+import {MainAPIService} from "../../services/main-api.service";
+import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-myslags',
@@ -18,6 +20,24 @@ import {animate, style, transition, trigger} from "@angular/animations";
     ])
   ]
 })
-export class MyslagsComponent {
+export class MyslagsComponent  {
+  public listWords$: Observable<any> | undefined;
+
+  constructor(private mainAPI: MainAPIService) {
+    this.listWords();
+
+  }
+
+
+  public listWords(){
+    this.listWords$ = this.mainAPI.listAllWords().pipe(
+      map(resp => {
+          return resp;
+      })
+
+    );
+  }
+
+
 
 }

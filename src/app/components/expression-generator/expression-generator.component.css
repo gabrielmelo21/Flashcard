@@ -1,0 +1,16 @@
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  float: right;
+  max-width: 400px; /* Ajuste conforme necessário para atender às suas necessidades */
+  margin-top: 16px; /* Espaçamento superior para separar o botão dos campos de entrada */
+}
+
+.mat-button-lg {
+  font-size: 23px; /* Tamanho da fonte para o botão grande */
+  padding: 30px;
+  width: 100%;
+}
