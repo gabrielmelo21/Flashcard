@@ -1,145 +1,95 @@
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: auto;
+  font-family: 'Bangers', cursive;
 
+  background: linear-gradient(45deg, #00ffff, #800080); /* Gradiente ciano a roxo */
+  background-clip: text; /* Aplicar o gradiente ao texto */
+  -webkit-background-clip: text; /* Para navegadores baseados em Webkit */
+  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1); /* Text-shadow branco bonito */
+  letter-spacing: 2px; /* Aumentar o espaçamento entre as letras */
+  padding-right: 10px; /* Adicionar um espaço extra à direita */
 
-
-.example-button-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5vh; /* Altura total da viewport */
-  padding: 10px;
-}
-
-.example-button-row button {
-  margin-right: 30px; /* Espaçamento entre os botões */
-  background: linear-gradient(165deg, #00ffff, #800080); /* Gradiente ciano a roxo */
-  color: white; /* Cor do texto */
-  animation: zoomIn 0.6s ease;
-
-}
-
-.btnClass{
-
-  background: linear-gradient(165deg, #00ffff, #800080); /* Gradiente ciano a roxo */
-  color: white; /* Cor do texto */
-  animation: zoomIn 0.6s ease;
-}
-
-
-.zoomAnimation{
-  animation: zoomIn 0.6s ease;
-}
-.content-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.content-wrapper img {
-  margin-right: 10px; /* Espaçamento entre a imagem e o texto */
-}
-
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
-.chalkboard {
-  background-color: #d4aa60; /* Cor bege para as bordas */
-  border: 6px solid  #d4aa60; /* Cor bege para as bordas */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 20px; /* Borda arredondada */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  height: 400px;
-}
-
-.chalkboard-content {
-  background-color: #003300;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  margin: 20px;
+  padding: 4px;
+
 }
 
-.chalkboard-content p {
-  margin: 0; /* Remove margens padrão do parágrafo */
+.paragraph {
   font-size: 21px; /* Tamanho da fonte */
   line-height: 1.5; /* Altura da linha */
+  color: #333; /* Cor do texto */
+  margin-bottom: 20px; /* Margem inferior para separar os parágrafos */
+  padding: 20px;
+}
 
+/* Estilização para parágrafos dentro de um container específico */
+.container .paragraph {
+  font-weight: bold; /* Texto em negrito */
+  color: #ff69b4; /* Cor rosa */
+}
+.text-list {
+  list-style-type: none;
+  padding: 0;
+}
 
+.text-item {
+
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.text-item h3 {
+  margin-top: 0;
+}
+
+.text-item p {
+  margin: 5px 0;
 }
 
 
-/*
-   SE FOR PRA PC, A estrutura de painel aparece, porem,
-   por conter outros conteudo, algumas estruturas disso
-   tem que ser global e funcionar no pc e no mobile
-
- */
 
 /* TELAS PC */
 @media (min-width: 769px) {
 
 
-
-   /** CENTRALIEZ PARA PC  **/
-  .centralize{
-
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 30vh; /* Ajusta a altura do contêiner para a tela inteira, se necessário */
-
+  .ajust_for_pc{
+    width: 50%;
+    margin-left: 400px;
+    margin-top: -100px;
   }
 
+
 }
+
+
 /* Telas Mobile */
 @media (max-width: 768px) {
-  .painel {
-    display: none; /* Esconder a barra de menu */
-  }
-
-  /** CENTRALIEZ PARA MOBILE  **/
-  .centralize{
-    padding: 10px;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 40vh; /* Ajusta a altura do contêiner para a tela inteira, se necessário */
-
-  }
-
 
 }
 
 
 
-.image-container {
+
+.card-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
-.image-container img {
-  width: 25%;
-  height: 25%;
+
+.text-item {
+  flex: 0 0 25%; /* Cada item ocupa 25% da largura do contêiner */
+  box-sizing: border-box;
+  padding: 10px;
 }
+
+
+
+
+
+
 
 

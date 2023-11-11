@@ -1,131 +1,21 @@
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-
-
-
-
-
-
-        <div>
-              <div *ngIf="response$==undefined" class="container">
-                <h1 class="logo">Aprenda Expressões, Girias e Palavras na Língua que desejar!</h1><br>
-                <div class="image-container">
-
-                  <img class='zoomAnimation' src="https://media2.giphy.com/media/8YL797zlgbDW8iyng2/giphy.gif?cid=ecf05e4767z21ztuaz3x6jpkurebuyglwrrl3gtf2wfks2ia&ep=v1_gifs_related&rid=giphy.gif&ct=s">
-
-
-                  <mat-form-field class="zoomAnimation">
-                    <mat-label>Selecione uma Língua</mat-label>
-                    <mat-select disableRipple [(ngModel)]="selectedLanguage" (ngModelChange)="onLanguageSelected()">
-                      <mat-option  value="Inglês"><img src="assets/ingles.png" width="25%">  <span style="margin-left: 10px"> Inglês</span> </mat-option>
-                      <mat-option value="Japonês"><img src="assets/japones.png" width="25%">  <span style="margin-left: 10px"> Japonês</span></mat-option>
-                      <mat-option value="Espanhol"><img src="assets/espanhol.png" width="25%">  <span style="margin-left: 10px"> Espanhol</span></mat-option>
-                      <mat-option value="Alemão"><img src="assets/alemao.png" width="25%">  <span style="margin-left: 10px"> Alemão</span></mat-option>
-                      <mat-option value="Chinês"><img src="assets/chines.png" width="25%">  <span style="margin-left: 10px"> Chinês</span></mat-option>
-                      <mat-option value="Francês"><img src="assets/frances.png" width="25%">  <span style="margin-left: 10px"> Francês</span></mat-option>
-                    </mat-select>
-                  </mat-form-field>
-
-
-
-                </div>
-
-              </div>
-
-          <br>
-          <div *ngIf="response$ | async as response; else loading2">
-            <div *ngIf="!msgError; else errorMsg">
-
-              <button mat-fab extended color="primary" (click)="goBack()"  class='btnClass'  style="margin-top: -100px;">
-              <i class="fi fi-sr-back" style="margin: 4px"></i>
-              Voltar
-            </button>
-
-              <div class="content-wrapper container">
-
-
-
-                <img class='zoomAnimation' width="40%" height="40%" src="https://media4.giphy.com/media/ZiT4BATmuZ5brqUxvb/giphy.gif?cid=ecf05e47qcc3mcqnmw33swdhp56powxc17u0ogqlila7t0w1&ep=v1_gifs_related&rid=giphy.gif&ct=s">
-
-                <div class="chalkboard zoomAnimation">
-                  <div class="chalkboard-content">
-                    <h3 style="text-align: center;color: white;font-weight: bold">Slang Doggy Diz:</h3>
-                    <p  >{{ response }}</p>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
+<main [@fadeInOut]>
+  <div style="height: 800px; overflow-y: scroll; overflow-x: hidden">
+    <mat-card-content>
+      <div *ngIf="listWords$ | async as words" class="text-list">
+        <div class="card-container">
+          <div *ngFor="let word of words" class="text-item">
+            <mat-card style="background: #1c1c1c; border-radius: 20px">
+              <mat-card-header>
+                <mat-card-title style="color: #00ffff; font-size: 16pt; padding: 20px">{{ word.english }}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <h4 style="color: #00ffff">Em Português: {{ word.portugues }}</h4>
+                <p>{{ word.explain }} </p>
+              </mat-card-content>
+            </mat-card>
           </div>
-          <ng-template #loading2>
-
-            <div *ngIf="isLoading" >
-              <div class="image-container">
-              <img class='zoomAnimation' src="https://media3.giphy.com/media/3cwLpdCalQrML78gbe/giphy.gif?cid=ecf05e4728r5n7qio6mt2dpnodqm04b36y2hf6wdll61rztc&ep=v1_stickers_search&rid=giphy.gif&ct=s">
-              </div>
-              </div>
-
-          </ng-template>
-          <ng-template #errorMsg>
-            <div>
-              <p style="color: red">Erro ao obter resposta.</p>
-            </div>
-          </ng-template>
         </div>
-
-
-
-
-
-
-
-<mat-card     [ngClass]="{'zoomAnimation': isAnimationActive}"  style="background: #1c1c1c;border-radius: 20px" >
-        <mat-card-header   >
-          <h3>Oque deseja aprender <span  [ngClass]="{'zoomAnimation': isAnimationActive}">{{ selectedLanguagelbl }}</span>? </h3>
-        </mat-card-header >
-         <mat-card   style="background: transparent;border-radius: 20px">
-
-
-           <mat-form-field hintLabel="Max 40 characters"  >
-             <mat-label>Pergunte para o Slang Doggy:</mat-label>
-             <input [disabled]="!mainBlock" matInput #input maxlength="40" placeholder="Me de uma dica para aprender {{ selectedLanguage }}">
-             <mat-hint align="end">{{input.value.length}}/40</mat-hint>
-             <button mat-fab  color="primary" (click)="getChatResponse('text')" style="float: right"><mat-icon>send</mat-icon></button>
-           </mat-form-field>
-
-
-
-
-           <br>
-           <div class="example-button-row">
-             <button [disabled]="!mainBlock" mat-fab extended color="primary" (click)="getChatResponse('giria')">
-               <i class="fi fi-sr-plus" style="margin: 4px"></i>
-               Gíria
-             </button>
-
-             <button [disabled]="!mainBlock" mat-fab extended color="primary" (click)="getChatResponse('dialogo')">
-               <i class="fi fi-sr-plus" style="margin: 4px"></i>
-               Diálogo
-             </button>
-
-             <button [disabled]="!mainBlock"  mat-fab extended color="primary" (click)="getChatResponse('expressao')">
-               <i class="fi fi-sr-plus" style="margin: 4px"></i>
-               Expressão
-             </button>
-
-             <button [disabled]="!mainBlock" mat-fab extended color="primary">
-               <i class="fi fi-sr-bookmark" style="margin: 4px"></i>
-               Salvar Texto Gerado
-             </button>
-           </div>
-         </mat-card>
-</mat-card>
-
-
-
-
-
-
-
-
+      </div>
+    </mat-card-content>
+  </div>
+</main>

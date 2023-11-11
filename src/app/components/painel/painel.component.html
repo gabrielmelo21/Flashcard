@@ -11,19 +11,9 @@
            (click)="selectOption('home')"
            [ngClass]="{ 'selected': selectedOption === 'home' }">
      <i class="fi fi-sr-add"  ></i>
-   <span>Gerador de Expressões </span>
+   <span>Flashcards</span>
    </button>
 
-   <button mat-fab extended
-           color="primary"
-           [routerLink]="['/slangs']"
-           routerLinkActive="active"
-           (click)="selectOption('slangs')"
-           [ngClass]="{ 'selected': selectedOption === 'slangs' }"
-   >
-     <i class="fi fi-sr-bookmark"></i>
-     <span>Expressões Salvas</span>
-   </button>
 
 
 
@@ -34,11 +24,21 @@
              (click)="selectOption('expressionGenerator')"
              [ngClass]="{ 'selected': selectedOption === 'expressionGenerator' }"
      >
-       <i class="fi fi-sr-pencil"></i>
-       <span>Salvar Expressões</span>
+       <i class="fi fi-sr-plus"></i>
+       <span>Add Flashcards</span>
      </button>
 
 
+   <button mat-fab extended
+           color="primary"
+           [routerLink]="['/frequency']"
+           routerLinkActive="active"
+           (click)="selectOption('frequency')"
+           [ngClass]="{ 'selected': selectedOption === 'frequency' }"
+   >
+     <i class="fi fi-sr-calendar"></i>
+     <span>Frequency</span>
+   </button>
 
 </div>
 

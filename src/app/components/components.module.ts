@@ -12,10 +12,12 @@ import {MatCardModule} from "@angular/material/card";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from "@angular/material/input";
 import { ExpressionGeneratorComponent } from './expression-generator/expression-generator.component';
+import { FrequencyComponent } from './frequency/frequency.component';
 @NgModule({
   declarations: [
   HomeComponent,
   ExpressionGeneratorComponent,
+  FrequencyComponent,
 
   ],
   imports: [
