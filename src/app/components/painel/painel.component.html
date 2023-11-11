@@ -2,20 +2,21 @@
 
 
 
- <div class="painelButtons">
+ <div class="painelButtons" >
+
    <button mat-fab extended
            color="primary"
-           routerLink="/home"
+           [routerLink]="['/home']"
            routerLinkActive="active"
            (click)="selectOption('home')"
            [ngClass]="{ 'selected': selectedOption === 'home' }">
      <i class="fi fi-sr-add"  ></i>
-   <span>Gerador de Expressões</span>
+   <span>Gerador de Expressões </span>
    </button>
 
    <button mat-fab extended
            color="primary"
-           routerLink="/slangs"
+           [routerLink]="['/slangs']"
            routerLinkActive="active"
            (click)="selectOption('slangs')"
            [ngClass]="{ 'selected': selectedOption === 'slangs' }"
@@ -28,13 +29,13 @@
 
      <button mat-fab extended
              color="primary"
-             routerLink="/expressionGenerator"
+             [routerLink]="['/expressionGenerator']"
              routerLinkActive="active"
              (click)="selectOption('expressionGenerator')"
              [ngClass]="{ 'selected': selectedOption === 'expressionGenerator' }"
      >
-       <i class="fi fi-sr-play"></i>
-       <span>Aprender com Vídeos</span>
+       <i class="fi fi-sr-pencil"></i>
+       <span>Salvar Expressões</span>
      </button>
 
 

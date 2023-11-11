@@ -8,22 +8,23 @@
   <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <mat-form-field  style="width: 100%">
       <mat-label>Inglês</mat-label>
-      <input matInput formControlName="ingles" placeholder="A expressão em inglês aprendida..."  >
+      <input matInput formControlName="english" >
     </mat-form-field>
        <br>
     <mat-form-field  style="width: 100%">
       <mat-label>Português</mat-label>
-      <input matInput formControlName="portugues" placeholder="A tradução da expressão..." required>
+      <input matInput formControlName="portugues" required>
     </mat-form-field>
 <br>
     <mat-form-field   style="width: 100%">
       <mat-label>Explain</mat-label>
-      <textarea matInput formControlName="explain" placeholder="Explique algo..." rows="5"></textarea>
+      <textarea matInput formControlName="explain" rows="5"></textarea>
     </mat-form-field>
 <br>
-    <div class="button-container">
+    <div class="button-container" *ngIf="this.formulario.valid">
       <button mat-raised-button color="primary" type="submit" class="mat-button-lg">Salvar nova expressão</button>
     </div>
+
   </form>
 
 

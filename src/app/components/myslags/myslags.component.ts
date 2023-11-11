@@ -32,7 +32,7 @@ export class MyslagsComponent  {
   public listWords(){
     this.listWords$ = this.mainAPI.listAllWords().pipe(
       map(resp => {
-          return resp;
+          return resp.reverse();
       })
 
     );

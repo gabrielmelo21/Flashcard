@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class MainAPIService {
-  private readonly API = 'http://localhost:8081/api';
+  private readonly API = 'http://localhost:8085/api';
   constructor(private http: HttpClient) { }
 
   public listAllWords(){

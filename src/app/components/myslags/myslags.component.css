@@ -37,7 +37,7 @@
 }
 
 .text-item {
-  border: 1px solid #ccc;
+
   padding: 16px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -75,6 +75,16 @@
 
 
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-item {
+  flex: 0 0 25%; /* Cada item ocupa 25% da largura do contêiner */
+  box-sizing: border-box;
+  padding: 10px;
+}
 
 
 

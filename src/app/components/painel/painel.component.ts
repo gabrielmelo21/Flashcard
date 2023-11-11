@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-painel',
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent {
-  selectedOption: string | null = 'home'; // Define 'home' como ativo por padrão ao carregar a página
+export class PainelComponent{
+
+
+
+  selectedOption: string | null = 'home';
 
   selectOption(option: string) {
     this.selectedOption = option;
   }
+
+
 }
