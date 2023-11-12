@@ -22,4 +22,12 @@ export class MainAPIService {
     return this.http.get<any>(this.API2)
   }
 
+  public update(){
+   return this.http.put<any>(this.API2, '')
+  }
+
+  public random(){
+    return this.http.get(this.API + "/random")
+  }
+
 }

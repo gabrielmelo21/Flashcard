@@ -10,7 +10,7 @@
            routerLinkActive="active"
            (click)="selectOption('home')"
            [ngClass]="{ 'selected': selectedOption === 'home' }">
-     <i class="fi fi-sr-add"  ></i>
+     <i class="fi fi-sr-document-signed"></i>
    <span>Flashcards</span>
    </button>
 
@@ -24,9 +24,22 @@
              (click)="selectOption('expressionGenerator')"
              [ngClass]="{ 'selected': selectedOption === 'expressionGenerator' }"
      >
-       <i class="fi fi-sr-plus"></i>
+       <i class="fi fi-sr-add"  ></i>
        <span>Add Flashcards</span>
      </button>
+
+
+   <button mat-fab extended
+           color="primary"
+           [routerLink]="['/practice']"
+           routerLinkActive="active"
+           (click)="selectOption('practice')"
+           [ngClass]="{ 'selected': selectedOption === 'practice' }"
+   >
+     <i class="fi fi-sr-graduation-cap"></i>
+     <span>Practice</span>
+   </button>
+
 
 
    <button mat-fab extended

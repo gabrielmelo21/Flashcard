@@ -42,7 +42,11 @@ export class ExpressionGeneratorComponent  {
         console.error('Erro ao enviar a mensagem:', error);
         this.openSnackBar("Erro ao enviar.", "close");
       }
+
+
     );
+
+    this.mainAPI.update().subscribe();
   }
 
 

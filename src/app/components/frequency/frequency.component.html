@@ -1,1 +1,14 @@
-<p>frequency works!</p>
+
+<h1 class="logo" style="margin:1px !important; padding:1px !important;">Frequency</h1><br>
+
+<div class="divLine"></div>
+
+<div class="container">
+  <ng-container *ngIf="listFrequency$ | async as frequencyData">
+    <div class="day-square" *ngFor="let day of frequencyData" [ngClass]="{'active': day.status, 'inactive': !day.status}">
+      <mat-icon *ngIf="day.status">check_circle</mat-icon>
+      <mat-icon *ngIf="!day.status">cancel</mat-icon>
+      <span class="day-number">{{ day.numeroDoDia }}</span>
+    </div>
+  </ng-container>
+</div>

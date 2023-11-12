@@ -1,0 +1,39 @@
+
+<div class="card-container" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="borderRadius10">
+    <mat-card-header>
+      <h2  class="titulo">{{english}}</h2>
+
+
+      <div class="divLine"></div>
+    </mat-card-header>
+    <mat-card-content>
+
+
+      <div class="blur-box" *ngIf="!verResposta" (click)="verResp()">
+        <p class="blur-text">Texto Borroso</p>
+        <p class="overlay-text">Ver Resposta</p>
+      </div>
+
+
+      <mat-card  *ngIf="verResposta" >
+        <mat-card-title>Português: <h2 class="color">{{portuguese}}</h2> </mat-card-title>
+        <mat-card-content>
+          <p style="padding: 10px;margin: 10px;font-size: 15pt">{{explain}}</p>
+        </mat-card-content>
+
+        <div class="divLine"></div>
+        <div class="button-container">
+          <button mat-button class="red-button">Não Memorizei</button>
+          <button mat-button class="green-button">Memorizei</button>
+        </div>
+
+
+      </mat-card>
+
+
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

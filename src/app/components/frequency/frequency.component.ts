@@ -20,4 +20,7 @@ export class FrequencyComponent {
     this.listFrequency$ = this.mainAPI.listFrequency();
   }
 
+
+
+
 }

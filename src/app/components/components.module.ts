@@ -13,11 +13,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from "@angular/material/input";
 import { ExpressionGeneratorComponent } from './expression-generator/expression-generator.component';
 import { FrequencyComponent } from './frequency/frequency.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { PracticeComponent } from './practice/practice.component';
 @NgModule({
   declarations: [
   HomeComponent,
   ExpressionGeneratorComponent,
   FrequencyComponent,
+  PracticeComponent,
 
   ],
   imports: [
@@ -32,7 +35,8 @@ import { FrequencyComponent } from './frequency/frequency.component';
     MatCardModule,
     FormsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
 
   ]
 })

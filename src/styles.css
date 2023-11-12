@@ -41,6 +41,23 @@ body.dark-theme {
 
 }
 
+.titulo{
+  color:#00ffff;
+  font-weight: bold;
+  margin:10px !important;
+  padding:10px !important;
+  text-align: center !important;
+  font-size: 25pt !important;
+}
+.color{
+  color:#00ffff;
+  font-weight: bold;
+}
+
+.borderRadius10{
+  border-radius: 10px !important;
+}
+
 .divLine {
   height: 1px;
   background-color: #1c1c1c;

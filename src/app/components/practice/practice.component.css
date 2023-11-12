@@ -1,0 +1,78 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Torna o container do card ocupar 100% da altura da viewport */
+}
+
+mat-card {
+  max-width: 600px; /* Ajuste conforme necessário */
+  width: 100%;
+}
+
+
+.blur-box {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('https://www.nashikmumbaicabs.com/wp-content/uploads/2021/10/dark-blur-blurred-gradient.jpg'); /* opcional: substitua pelo caminho da sua imagem de fundo */
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.blur-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: transparent;
+  margin: 0;
+  font-size: 18px;
+  filter: blur(10px);
+  letter-spacing: 3px; /* Ajuste conforme necessário */
+  line-height: 2.5; /* Ajuste conforme necessário */
+  padding: 10px; /* Ajuste conforme necessário */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px; /* Ajuste conforme necessário */
+  line-height: 2.5; /* Ajuste conforme necessário */
+  padding: 10px; /* Ajuste conforme necessário */
+}
+.button-container {
+  display: flex;
+}
+
+.red-button,
+.green-button {
+  margin-right: 10px; /* Adicione margem entre os botões conforme necessário */
+  width: 100%;
+}
+
+.red-button {
+  background-color: #e74c3c; /* Cor vermelha */
+}
+
+.green-button {
+  background-color: #2ecc71; /* Cor verde */
+
+}
+
+/* Adicionando estilos arredondados usando a classe mat-button */
+.mat-button-base {
+  border-radius: 20px; /* Valor que determina o quão arredondadas serão as bordas */
+  color: #fff; /* Cor do texto nos botões */
+  font-size: 16px;
+  font-weight: bold;
+}
