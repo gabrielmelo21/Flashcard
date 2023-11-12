@@ -14,6 +14,12 @@ export class MainAPIService {
     return this.http.get<any>(this.API);
 
   }
+
+  public updateMemo(id: number){
+    return this.http.put(this.API + "/updateMemo/"+id, '');
+  }
+
+
   public addWords(data: any) {
     return this.http.post<any>(this.API, data);
   }
@@ -29,5 +35,6 @@ export class MainAPIService {
   public random(){
     return this.http.get(this.API + "/random")
   }
+
 
 }

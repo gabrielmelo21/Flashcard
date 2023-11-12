@@ -19,13 +19,14 @@
       <mat-card  *ngIf="verResposta" >
         <mat-card-title>Português: <h2 class="color">{{portuguese}}</h2> </mat-card-title>
         <mat-card-content>
-          <p style="padding: 10px;margin: 10px;font-size: 15pt">{{explain}}</p>
+          <p style="padding: 10px; margin: 10px; font-size: 15pt; white-space: pre-line;">{{ explain }}</p>
+
         </mat-card-content>
 
         <div class="divLine"></div>
         <div class="button-container">
-          <button mat-button class="red-button">Não Memorizei</button>
-          <button mat-button class="green-button">Memorizei</button>
+          <button mat-button class="red-button" (click)="newRandomWord()">Não Memorizei</button>
+          <button mat-button class="green-button" (click)="updateMemorize(id)">Memorizei</button>
         </div>
 
 

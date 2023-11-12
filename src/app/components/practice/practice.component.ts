@@ -31,6 +31,17 @@ export class PracticeComponent {
     this.verResposta = true;
   }
 
+  public newRandomWord(){
+    this.verResposta = false;
+    this.getRandomWord();
+  }
+
+  public updateMemorize(id: any){
+     this.mainAPI.updateMemo(id).subscribe();
+    this.verResposta = false;
+    this.getRandomWord();
+  }
+
 // No seu código, utilize a interface na função map
   public getRandomWord() {
     this.mainAPI.random().pipe(
