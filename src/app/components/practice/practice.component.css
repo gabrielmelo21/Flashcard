@@ -3,11 +3,13 @@
   justify-content: center;
   align-items: center;
   height: 75vh; /* Torna o container do card ocupar 100% da altura da viewport */
+
 }
 
 mat-card {
   max-width: 600px; /* Ajuste conforme necessário */
   width: 100%;
+  background:rgba(0, 0, 0, 0.5);
 }
 
 

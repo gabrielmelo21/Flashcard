@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,20 @@ import {Observable} from "rxjs";
 export class MainAPIService {
   private readonly API = 'http://localhost:8085/api';
   private readonly API2 = "http://localhost:8085/frequency"
+  private readonly API3 = "http://localhost:8085/gpt/completeWithGPT"
   constructor(private http: HttpClient) { }
+
+
+  public completeWithGPT(prompt: any) {
+    const prompt1 = "Explique a expressão " + prompt;
+    const data = {
+      "prompt": prompt1
+    };
+
+    return this.http.post(this.API3, data, { responseType: 'text' as 'json' });
+  }
+
+
 
   public listAllWords(){
     return this.http.get<any>(this.API);

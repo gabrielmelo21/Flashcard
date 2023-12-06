@@ -8,6 +8,7 @@ import {MainAPIService} from "../../services/main-api.service";
   styleUrls: ['./frequency.component.css']
 })
 export class FrequencyComponent {
+  
   public listFrequency$: Observable<any> | undefined;
 
   constructor(private mainAPI: MainAPIService) {

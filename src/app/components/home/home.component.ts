@@ -1,6 +1,5 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {catchError, finalize, map, Observable, of} from "rxjs";
-import {ChatgptService} from "../services/chatgpt.service";
 import {animate, style, transition, trigger} from "@angular/animations";
 import {MainAPIService} from "../../services/main-api.service";
 

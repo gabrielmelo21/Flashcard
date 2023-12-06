@@ -4,11 +4,19 @@
 <h1 class="logo">Salve as expressões aprendidas</h1><br>
 
 <div class="divLine"></div>
+<div class="button-container"  >
+  <mat-spinner *ngIf="isLoading" diameter="50" color="primary" style="margin-right: 20px"></mat-spinner>
+
+  <button *ngIf="buttonGPT" (click)="completeGPT()" mat-raised-button color="primary" type="submit" class="mat-button-sm">
+    Completar com GPT
+  </button>
+</div>
+
 
   <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <mat-form-field  style="width: 100%">
       <mat-label>Inglês</mat-label>
-      <input matInput formControlName="english" >
+      <input matInput formControlName="english" (input)="verify_button_completeWithGPT()" >
     </mat-form-field>
        <br>
     <mat-form-field  style="width: 100%">
@@ -16,6 +24,8 @@
       <input matInput formControlName="portugues" required>
     </mat-form-field>
 <br>
+
+
     <mat-form-field   style="width: 100%">
       <mat-label>Explain</mat-label>
       <textarea matInput formControlName="explain" rows="5"></textarea>
