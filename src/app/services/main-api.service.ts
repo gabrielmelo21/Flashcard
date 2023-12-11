@@ -8,12 +8,12 @@ import {HttpClient} from "@angular/common/http";
 export class MainAPIService {
   private readonly API = 'http://localhost:8085/api';
   private readonly API2 = "http://localhost:8085/frequency"
-  private readonly API3 = "http://localhost:8085/gpt/completeWithGPT"
+  private readonly API3 = "https://ancient-plains-05271-80493b2e3b65.herokuapp.com/gpt"
   constructor(private http: HttpClient) { }
 
 
   public completeWithGPT(prompt: any) {
-    const prompt1 = "Explique a expressão " + prompt;
+    const prompt1 = "Explique a expressão '" + prompt + "' de forma simples e resumida, com a tradução em português ";
     const data = {
       "prompt": prompt1
     };
