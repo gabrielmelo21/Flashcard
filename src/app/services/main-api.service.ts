@@ -6,8 +6,8 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class MainAPIService {
-  private readonly API = 'http://localhost:8085/api';
-  private readonly API2 = "http://localhost:8085/frequency"
+  private readonly API = 'https://flashcards-java-api-277848877d0d.herokuapp.com/api';
+  private readonly API2 = "https://flashcards-java-api-277848877d0d.herokuapp.com/frequency"
   private readonly API3 = "https://ancient-plains-05271-80493b2e3b65.herokuapp.com/gpt"
   constructor(private http: HttpClient) { }
 
