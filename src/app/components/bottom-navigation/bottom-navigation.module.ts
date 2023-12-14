@@ -4,6 +4,7 @@ import {BottomNavigationComponent} from "./bottom-navigation.component";
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     MatIconModule,
     MatTabsModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatButtonModule
   ],
   exports: [BottomNavigationComponent]
 })
