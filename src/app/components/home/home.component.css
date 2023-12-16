@@ -1,22 +1,3 @@
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  margin-right: auto;
-  font-family: 'Bangers', cursive;
-
-  background: linear-gradient(45deg, #00ffff, #800080); /* Gradiente ciano a roxo */
-  background-clip: text; /* Aplicar o gradiente ao texto */
-  -webkit-background-clip: text; /* Para navegadores baseados em Webkit */
-  color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1); /* Text-shadow branco bonito */
-  letter-spacing: 2px; /* Aumentar o espaçamento entre as letras */
-  padding-right: 10px; /* Adicionar um espaço extra à direita */
-
-  text-align: center;
-  margin: 20px;
-  padding: 4px;
-
-}
 
 .paragraph {
   font-size: 21px; /* Tamanho da fonte */
@@ -63,6 +44,19 @@
     margin-top: -100px;
   }
 
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .text-item {
+    flex: 0 0 25%; /* Cada item ocupa 25% da largura do contêiner */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+
+
 
 }
 
@@ -70,21 +64,16 @@
 /* Telas Mobile */
 @media (max-width: 768px) {
 
+  .text-item {
+    flex: 0 0 25%; /* Cada item ocupa 25% da largura do contêiner */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
 }
 
 
 
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.text-item {
-  flex: 0 0 25%; /* Cada item ocupa 25% da largura do contêiner */
-  box-sizing: border-box;
-  padding: 10px;
-}
 
 
 

@@ -1,10 +1,10 @@
 <!--<h1>Aqui vai ficar a barra de video , video e inputs para marcar expressions </h1>
 -->
 
-<h1 class="logo">Salve as expressões aprendidas</h1><br>
 
-<div class="divLine"></div>
+<h3 style="text-align: center;margin: 20px;">Digite uma expressão em inglês e aprenda com Chat GPT!</h3>
 <div class="button-container"  >
+
   <mat-spinner *ngIf="isLoading" diameter="50" color="primary" style="margin-right: 20px"></mat-spinner>
 
   <button *ngIf="buttonGPT" (click)="completeGPT()" mat-raised-button color="primary" type="submit" class="mat-button-sm">
@@ -13,7 +13,7 @@
 </div>
 
 
-  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" style="margin:15px;margin-top:30px !important;">
     <mat-form-field  style="width: 100%">
       <mat-label>Inglês</mat-label>
       <input matInput formControlName="english" (input)="verify_button_completeWithGPT()" >
