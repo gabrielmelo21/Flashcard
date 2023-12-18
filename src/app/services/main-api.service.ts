@@ -6,20 +6,48 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class MainAPIService {
-  private readonly API = 'https://flashcards-ai-java-api.onrender.com/api';
-  private readonly API2 = "https://flashcards-ai-java-api.onrender.com/frequency"
-  private readonly API3 = "https://chatgpt-api-qoph.onrender.com/gpt"
+  private readonly API = 'http://localhost:8085/api';
+  private readonly API2 = "http://localhost:8085/frequency"
+  private readonly API3 = "http://localhost:8888/gpt"
+
+  /**
+   *
+   *   private readonly API = 'https://flashcards-ai-java-api.onrender.com/api';
+   *   private readonly API2 = "https://flashcards-ai-java-api.onrender.com/frequency"
+   *
+   * @param http
+   */
   constructor(private http: HttpClient) { }
 
 
   public completeWithGPT(prompt: any) {
-    const prompt1 = "Explique a expressão '" + prompt + "' de forma simples e resumida, com pelo menos um exemplo.";
+    const prompt1 = "Explique a expressão '" + prompt + "'";
     const data = {
       "prompt": prompt1
     };
 
     return this.http.post(this.API3, data, { responseType: 'text' as 'json' });
   }
+
+
+  public transalateWithGPT(prompt: any){
+    const prompt1 = "Traduza para pt-br: '" + prompt + "'";
+    const data = {
+      "prompt": prompt1
+    };
+
+    return this.http.post(this.API3, data, { responseType: 'text' as 'json' });
+  }
+
+  public phrasalVerbWithGPT(){
+    const prompt1 = "Me ensine um Phrsal Verb";
+    const data = {
+      "prompt": prompt1
+    };
+
+    return this.http.post(this.API3, data, { responseType: 'text' as 'json' });
+  }
+
 
 
 

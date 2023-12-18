@@ -50,8 +50,8 @@ body.dark-theme {
   font-size: 25pt !important;
 }
 .color{
-  color:#00ffff;
-  font-weight: bold;
+  color:#00ffff !important;
+  font-weight: bold !important;
 }
 
 .borderRadius10{

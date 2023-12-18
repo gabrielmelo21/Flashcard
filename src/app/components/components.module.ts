@@ -15,12 +15,16 @@ import { ExpressionGeneratorComponent } from './expression-generator/expression-
 import { FrequencyComponent } from './frequency/frequency.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { PracticeComponent } from './practice/practice.component';
+import { TradutorComponent } from './tradutor/tradutor.component';
+import { PhrsalVerbsComponent } from './phrsal-verbs/phrsal-verbs.component';
 @NgModule({
   declarations: [
   HomeComponent,
   ExpressionGeneratorComponent,
   FrequencyComponent,
   PracticeComponent,
+  TradutorComponent,
+  PhrsalVerbsComponent,
 
   ],
   imports: [

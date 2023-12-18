@@ -31,6 +31,21 @@
 
    <button mat-fab extended
            color="primary"
+           [routerLink]="['/tradutor']"
+           routerLinkActive="active"
+           (click)="selectOption('tradutor')"
+           [ngClass]="{ 'selected': selectedOption === 'tradutor' }"
+   >
+     <i class="fi fi-sr-globe"></i>
+     <span>Translate</span>
+   </button>
+
+
+
+
+
+   <button mat-fab extended
+           color="primary"
            [routerLink]="['/practice']"
            routerLinkActive="active"
            (click)="selectOption('practice')"
